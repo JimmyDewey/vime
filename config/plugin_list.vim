@@ -202,3 +202,7 @@ let g:coc_global_extensions = [
     " \ 'coc-bookmark',
     " \ 'coc-rainbow-fart',
     " \ 'coc-lists',
+
+" 运行C/C++
+Plug 'skywind3000/asyncrun.vim', {'on': ['AsyncRun', 'AsyncStop'] }
+Plug 'skywind3000/asynctasks.vim', {'on': ['AsyncTask', 'AsyncTaskMacro', 'AsyncTaskList', 'AsyncTaskEdit'] }

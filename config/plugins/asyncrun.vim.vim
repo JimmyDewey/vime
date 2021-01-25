@@ -2,3 +2,9 @@
 " https://github.com/skywind3000/asyncrun.vim/wiki/Customize-Runner
 " https://github.com/voldikss/vim-floaterm#asynctasksvim
 let g:asyncrun_open = 6
+
+noremap <silent><f5> :AsyncTask file-run<cr>
+noremap <silent><f9> :AsyncTask file-build<cr>
+
+noremap <silent><f6> :AsyncTask project-run<cr>
+noremap <silent><f7> :AsyncTask project-build<cr>

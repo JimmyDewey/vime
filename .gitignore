@@ -10,3 +10,4 @@ nerdtree.json
 *.old
 *~
 test.vim
+.DS_Store
