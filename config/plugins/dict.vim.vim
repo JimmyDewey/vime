@@ -1,8 +1,8 @@
-nmap <silent> <leader>e <Plug>DictSearch
-vmap <silent> <leader>e <Plug>DictVSearch
+nmap <silent> <leader>de <Plug>DictSearch
+vmap <silent> <leader>de <Plug>DictVSearch
 
-nmap <silent> <leader>w <Plug>DictWSearch
-vmap <silent> <leader>w <Plug>DictWVSearch
+nmap <silent> <leader>dw <Plug>DictWSearch
+vmap <silent> <leader>dw <Plug>DictWVSearch
 
-nmap <silent> <Leader>r <Plug>DictRSearch
-vmap <silent> <Leader>r <Plug>DictRVSearch
+nmap <silent> <Leader>dr <Plug>DictRSearch
+vmap <silent> <Leader>dr <Plug>DictRVSearch

@@ -1,3 +1,9 @@
+" 绑定leader到space
+let mapleader = "\<Space>"
+
+" leader-w保存文件
+noremap <leader>w :w<cr>
+
 " 窗口相关快捷键
 noremap <c-h> <C-w>h
 noremap <c-j> <C-w>j
@@ -25,9 +31,9 @@ nnoremap <silent> q <esc>:close<cr>
 vnoremap <silent> q <esc>:close<cr>
 
 " 使用回车打开关闭折叠
-nnoremap <CR> za
+" nnoremap <CR> za
 " shift enter，为何不可以？
-nnoremap <S-Return> zMzo
+" nnoremap <S-Return> zMzo
 " 关闭搜索颜色
 nnoremap <BackSpace> :nohl<cr>
 

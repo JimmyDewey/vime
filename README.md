@@ -899,9 +899,9 @@ debug可以选择使用[puremourning/*vimspector*](https://github.com/puremourni
 
 | 按键          | 模式                       | 描述 |
 | ------------- | -------------------------- | ---- |
-| \<leader>w | normal/visual | 翻译当前光标下的内容/选中的内容，在新窗口展示 |
-| \<leader>e | normal/visual | 在命令栏输出解释 |
-| \<leader>r | normal/visual | 用翻译内容替换当前光标或选中的内容 |
+| \<leader>dw | normal/visual | 翻译当前光标下的内容/选中的内容，在新窗口展示 |
+| \<leader>de | normal/visual | 在命令栏输出解释 |
+| \<leader>dr | normal/visual | 用翻译内容替换当前光标或选中的内容 |
 
 
 
