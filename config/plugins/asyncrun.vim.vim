@@ -5,6 +5,8 @@ let g:asyncrun_open = 6
 
 noremap <silent><f5> :AsyncTask file-run<cr>
 noremap <silent><f9> :AsyncTask file-build<cr>
+noremap <leader>lb :AsyncTask file-build<cr>
+noremap <leader>lr :AsyncTask file-run<cr>
 
 noremap <silent><f6> :AsyncTask project-run<cr>
 noremap <silent><f7> :AsyncTask project-build<cr>
