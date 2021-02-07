@@ -68,8 +68,8 @@ set autowrite
 " 显示确认对话框
 set confirm
 set noshowmode
-set ttimeout
-set timeoutlen=500
+"set ttimeout
+"set timeoutlen=500
 set ttimeoutlen=10
 " 更新时间100ms 默认4000ms 写入swap的时间
 set updatetime=100
