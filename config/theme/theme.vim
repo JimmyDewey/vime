@@ -29,14 +29,14 @@ set guicursor=n-v-c-sm:block-Cursor,i-ci-ve:ver25-Cursor,r-cr-o:hor20
 set incsearch
 " 高亮匹配内容
 set hlsearch
-set list
+set nolist
 " 只有set list下面的才会起作用
-if &list
-    set listchars=tab:\|\→·,nbsp:⣿,extends:»,precedes:«
-    set listchars+=eol:¬
-    set listchars+=trail:·
-    " set listchars+=space:␣
-endif
+" if &list
+    " set listchars=tab:\|\→·,nbsp:⣿,extends:»,precedes:«
+    " set listchars+=eol:¬
+    " set listchars+=trail:·
+    " " set listchars+=space:␣
+" endif
 " 搜索高亮颜色
 hi Search ctermfg=17 ctermbg=190 guifg=#000000 guibg=#ffff00
 
@@ -51,11 +51,11 @@ endif
 " let g:srcery_transparent_background = 1
 " silent! colorscheme srcery
 
-" let g:forest_night_enable_italic = 1
-" let g:forest_night_transparent_background = 1
-" silent! colorscheme forest-night
+let g:forest_night_enable_italic = 1
+let g:forest_night_transparent_background = 1
+silent! colorscheme forest-night
 
-silent! colorscheme nvcode
+" silent! colorscheme nvcode
 
 " let g:one_allow_italics = 1
 " silent! colorscheme one

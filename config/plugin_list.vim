@@ -190,13 +190,12 @@ let g:coc_global_extensions = [
     \ 'coc-python',
     \ 'coc-explorer',
     \ 'coc-ci',
-    \ 'coc-floaterm',
+    \ 'coc-prettier',
     \ ]
 
     " \ 'coc-git',
     " \ 'coc-marketplace',
     " \ 'coc-tsserver',
-    " \ 'coc-prettier',
     " \ 'coc-calc',
     " \ 'coc-tabnine',
     " \ 'coc-fzf-preview',
@@ -211,3 +210,5 @@ Plug 'skywind3000/asynctasks.vim', {'on': ['AsyncTask', 'AsyncTaskMacro', 'Async
 Plug 'voldikss/vim-floaterm'
 
 Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
+
+Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary!' }

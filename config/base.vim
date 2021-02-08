@@ -21,7 +21,7 @@ endif
 
 set number
 " 设置相对行号
-set relativenumber
+" set relativenumber
 " 智能缩进
 set smartindent
 " 自动换行缩进
@@ -43,10 +43,10 @@ set history=500
 set splitbelow
 " tab扩展为空格
 set expandtab
-set tabstop=4
+set tabstop=2
 " 连续数量的空格看作一个制表符
-set softtabstop=4
-set shiftwidth=4
+set softtabstop=2
+set shiftwidth=2
 set smarttab
 set shiftround
 if has('folding')
@@ -68,8 +68,6 @@ set autowrite
 " 显示确认对话框
 set confirm
 set noshowmode
-"set ttimeout
-"set timeoutlen=500
 set ttimeoutlen=10
 " 更新时间100ms 默认4000ms 写入swap的时间
 set updatetime=100
@@ -86,7 +84,7 @@ set matchtime=2
 set ffs=unix,dos,mac
 " 与系统共用剪切板
 " 在某些系统上可能会出现vim打开时间长的问题
-set clipboard=unnamedplus
+set clipboard=unnamedplus,unnamed
 
 if has('nvim') == 0 && has('patch-8.1.2020')
     set cursorlineopt=number cursorline

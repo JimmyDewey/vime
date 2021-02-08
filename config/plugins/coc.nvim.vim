@@ -114,30 +114,30 @@ if !common#functions#HasPlug('nvim-treesitter')
 endif
 
 if common#functions#HasPlug('coc-fzf')
-    nnoremap <silent> <space>A  :<C-u>CocFzfList diagnostics<CR>
-    nnoremap <silent> <space>a  :<C-u>CocFzfList diagnostics --current-buf<CR>
-    nnoremap <silent> <space>c  :<C-u>CocFzfList commands<CR>
-    nnoremap <silent> <space>e  :<C-u>CocFzfList extensions<CR>
-    nnoremap <silent> <space>l  :<C-u>CocFzfList<CR>
+    " nnoremap <silent> <space>A  :<C-u>CocFzfList diagnostics<CR>
+    " nnoremap <silent> <space>a  :<C-u>CocFzfList diagnostics --current-buf<CR>
+    " nnoremap <silent> <space>c  :<C-u>CocFzfList commands<CR>
+    " nnoremap <silent> <space>e  :<C-u>CocFzfList extensions<CR>
+    nnoremap <silent> <space>f  :<C-u>CocFzfList<CR>
     " nnoremap <silent> <space>l  :<C-u>CocFzfList location<CR>
-    nnoremap <silent> <space>o  :<C-u>CocFzfList outline<CR>
-    nnoremap <silent> <space>O  :<C-u>CocFzfList symbols<CR>
-    nnoremap <silent> <space>s  :<C-u>CocFzfList services<CR>
-    nnoremap <silent> <space>p  :<C-u>CocFzfListResume<CR>
+    " nnoremap <silent> <space>o  :<C-u>CocFzfList outline<CR>
+    " nnoremap <silent> <space>O  :<C-u>CocFzfList symbols<CR>
+    " nnoremap <silent> <space>s  :<C-u>CocFzfList services<CR>
+    " nnoremap <silent> <space>p  :<C-u>CocFzfListResume<CR>
 else
     " Show all diagnostics
-    nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
+    " nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
     " Manage extensions
     " nnoremap <silent> <space>e  :<C-u>CocList extensions<cr>
-    nnoremap <silent> <space>o  :<C-u>CocList --auto-preview outline<cr>
-    nnoremap <silent> <space>O  :<C-u>CocList --auto-preview --interactive symbols<cr>
+    " nnoremap <silent> <space>o  :<C-u>CocList --auto-preview outline<cr>
+    " nnoremap <silent> <space>O  :<C-u>CocList --auto-preview --interactive symbols<cr>
     " Show commands
-    nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
+    " nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
     " Resume latest coc list
-    nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
+    " nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
     " nnoremap <silent> <space>s  :<C-u>CocList services<CR>
     " show coclist 早晚要放进去的
-    nnoremap <silent> <space>l  :<C-u>CocList<CR>
+    nnoremap <silent> <space>f  :<C-u>CocList<CR>
 endif
 
 " 多光标支持，但是coc的多光标不如 vim-visual-multi，因此在没有
@@ -245,7 +245,7 @@ function! s:lc_coc_yank() abort
 endfunction
 
 function! s:lc_coc_translator() abort
-    nmap  <leader>e <Plug>(coc-translator-e)
+    " nmap  <leader>e <Plug>(coc-translator-e)
     nmap  <leader>d <Plug>(coc-translator-p)
 endfunction
 
@@ -428,10 +428,10 @@ function! s:lc_coc_explorer() abort
 
     " Use preset argument to open it
     " nmap <space>rd :CocCommand explorer --preset .vim<CR>
-    nmap <F2> :CocCommand explorer<CR>
-    if !common#functions#HasPlug('ranger.vim')
-        nmap <leader>f :CocCommand explorer --preset floating<CR>
-    endif
+    nmap <leader>e :CocCommand explorer<CR>
+    " if !common#functions#HasPlug('ranger.vim')
+    "    nmap <leader>f :CocCommand explorer --preset floating<CR>
+    " endif
 
     augroup vime_coc_explorer_group
         autocmd!
