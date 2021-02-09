@@ -1,6 +1,6 @@
 " 语法检查
 Plug 'w0rp/ale'
-"
+
 " 代码补全插件
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 " 检索
@@ -9,16 +9,10 @@ Plug 'fszymanski/fzf-gitignore', {'do': ':UpdateRemotePlugins'}
 Plug 'junegunn/fzf.vim' | Plug 'antoinemadec/coc-fzf',  {'branch': 'release'}
 " c debug
 Plug 'puremourning/vimspector'
-" git插件
-Plug 'tpope/vim-fugitive', {'on': ['Gwrite', 'Gcommit', 'Gread', 'Gdiff', 'Gblame']}
-\ | Plug 'rbong/vim-flog'
-\ | Plug 'airblade/vim-gitgutter'
 " 注释插件
 Plug 'scrooloose/nerdcommenter'
 " 生成注释文档
 Plug 'kkoomen/vim-doge', {'do': {-> doge#install()}}
-" 全局替换插件
-Plug 'brooth/far.vim'
 " 主题theme类插件
 Plug 'ajmwagar/vim-deus'
 Plug 'rakr/vim-one'
@@ -61,7 +55,6 @@ Plug 'tpope/vim-repeat'
 Plug 'ntpeters/vim-better-whitespace'
 " 代码段
 Plug 'honza/vim-snippets'
-" Plug 'SirVer/ultisnips'
 " 快速选择窗口
 Plug 't9md/vim-choosewin'
 " 快速移动
@@ -80,21 +73,12 @@ Plug 'Yggdroot/indentLine', {'on': 'IndentLinesEnable'}
 Plug 'mg979/vim-visual-multi'
 " 悬浮终端
 Plug 'voldikss/vim-floaterm', {'on': ['FloatermNew', 'FloatermToggle']}
-" 笔记插件，支持markdown
-Plug 'vimwiki/vimwiki'
-" Plug 'SidOfc/mkdx'
-" markdown 预览插件
-Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug', 'vimwiki'], 'on': 'MarkdownPreview'}
-" Plug 'mzlogin/vim-markdown-toc', {'on': ['GenTocGFM', 'GenTocRedcarpet', 'GenTocGitLab', 'GenTocMarked']}
 " 功能很强的折叠插件, zc zo
 Plug 'pseewald/vim-anyfold'
 " 起始界面
 Plug 'mhinz/vim-startify'
 " 关闭buffer而不关闭窗口
 Plug 'rbgrouleff/bclose.vim', {'on': 'Bclose'}
-" latex插件
-Plug 'lervag/vimtex', {'for': 'tex'}
-Plug 'KeitaNakamura/tex-conceal.vim', {'for': 'tex'}
 " 平滑滚动
 Plug 'psliwka/vim-smoothie'
 " 在命令行使用linux命令新建文件文件夹重命名当前buffer等
@@ -113,34 +97,8 @@ if has('nvim')
 else
     Plug 'RRethy/vim-hexokinase',  { 'do': 'make hexokinase' }
 endif
-" 加强版的 go to file
-Plug 'tpope/vim-apathy'
 " 查看启动时间
 Plug 'dstein64/vim-startuptime', {'on':'StartupTime'}
-" 专注阅读
-Plug 'junegunn/goyo.vim', { 'on': 'Goyo', 'for': 'markdown' }
-\ | Plug 'junegunn/limelight.vim', { 'on': 'Limelight' }
-Plug 'markonm/traces.vim'
-" 语法检查
-Plug 'rhysd/vim-grammarous', {'for': ['markdown', 'vimwiki', 'md', 'tex']}
-" 首先需要在config/plugin_list.vim中增加插件
-Plug 'matze/vim-move', {'on': [
-            \ '<Plug>MoveBlockDown',
-            \ '<Plug>MoveBlockUp',
-            \ '<Plug>MoveBlockRight',
-            \ '<Plug>MoveBlockLeft']}
-Plug 'simnalamburt/vim-mundo'
-if has('nvim')
-    Plug 'kyazdani42/nvim-web-devicons'
-else
-    Plug 'ryanoasis/vim-devicons'
-endif
-" 忘记sudo?使用sudowrite或sw
-Plug 'lambdalisue/suda.vim'
-Plug 'fgheng/ResizeWindow.vim'
-if has('nvim')
-    Plug 'dstein64/nvim-scrollview'
-endif
 
 " coc插件列表，可根据需要进行删减
 let g:coc_global_extensions = [
@@ -181,3 +139,7 @@ Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary!' }
 
 " [开头的快捷键
 Plug 'tpope/vim-unimpaired'
+
+" 撤销树
+Plug 'simnalamburt/vim-mundo'
+
