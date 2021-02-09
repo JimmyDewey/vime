@@ -168,8 +168,6 @@ endif
 " 忘记sudo?使用sudowrite或sw
 Plug 'lambdalisue/suda.vim'
 Plug 'fgheng/ResizeWindow.vim'
-Plug 'tyru/open-browser.vim'
-" Plug 'ojroques/vim-scrollstatus'
 if has('nvim')
     Plug 'dstein64/nvim-scrollview'
 endif
