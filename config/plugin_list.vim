@@ -1,5 +1,7 @@
+" 语法检查
+Plug 'w0rp/ale'
+"
 " 代码补全插件
-" Plug 'ycm-core/YouCompleteMe', {'do': 'python3 install.py --all'} | Plug 'airblade/vim-gitgutter'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 " 检索
 Plug 'junegunn/fzf', { 'do': {-> fzf#install()} }
@@ -15,8 +17,6 @@ Plug 'tpope/vim-fugitive', {'on': ['Gwrite', 'Gcommit', 'Gread', 'Gdiff', 'Gblam
 Plug 'scrooloose/nerdcommenter'
 " 生成注释文档
 Plug 'kkoomen/vim-doge', {'do': {-> doge#install()}}
-" 数据库
-Plug 'tpope/vim-dadbod' | Plug 'kristijanhusak/vim-dadbod-ui' | Plug 'kristijanhusak/vim-dadbod-completion'
 " 全局替换插件
 Plug 'brooth/far.vim'
 " 主题theme类插件
@@ -49,16 +49,12 @@ Plug 'ChristianChiarulli/nvcode-color-schemes.vim'
 " 顶栏和底栏
 " Plug 'rbong/vim-crystalline'
 Plug 'itchyny/lightline.vim'
-" Plug 'liuchengxu/eleline.vim'
 " 彩虹括号
 Plug 'luochen1990/rainbow'
 " 函数列表
 Plug 'liuchengxu/vista.vim', {'on': ['Vista!!', 'Vista']}
 " 自动补全括号
 Plug 'jiangmiao/auto-pairs'
-" 快速包围
-Plug 'tpope/vim-surround'
-" Plug 'machakann/vim-sandwich'
 " 重复上次的动作
 Plug 'tpope/vim-repeat'
 " 显示清除尾部空格
@@ -82,8 +78,6 @@ Plug 'junegunn/vim-easy-align', {'on': ['EasyAlign', '<Plug>(EasyAlign)']}
 Plug 'Yggdroot/indentLine', {'on': 'IndentLinesEnable'}
 " 多光标
 Plug 'mg979/vim-visual-multi'
-" csv插件
-Plug 'chrisbra/csv.vim', {'for': 'csv'}
 " 悬浮终端
 Plug 'voldikss/vim-floaterm', {'on': ['FloatermNew', 'FloatermToggle']}
 " 笔记插件，支持markdown
@@ -102,17 +96,6 @@ Plug 'iamcco/dict.vim', {'on':
     \ '<Plug>DictSearch', '<Plug>DictVSearch', '<Plug>DictWSearch',
     \ '<Plug>DictWVSearch', '<Plug>DictRSearch', '<Plug>DictRVSearch'
     \ ]}
-" tmux相关插件
-if  executable("tmux") && strlen($TMUX)
-    " tmux与vim窗口间导航
-    Plug 'christoomey/vim-tmux-navigator'
-    " tmux.conf set -g focus-events on
-    Plug 'tmux-plugins/vim-tmux-focus-events'
-    " 在tmux和vim之间进行复制与粘贴
-    Plug 'roxma/vim-tmux-clipboard'
-    " tmux补全插件
-    Plug 'wellle/tmux-complete.vim'
-endif
 " 关闭buffer而不关闭窗口
 Plug 'rbgrouleff/bclose.vim', {'on': 'Bclose'}
 " latex插件
@@ -126,15 +109,8 @@ Plug 'tpope/vim-eunuch', {'on': ['Mkdir', 'Rename', 'Unlink', 'Delete', 'Move', 
 Plug 'troydm/zoomwintab.vim', {'on': 'ZoomWinTabToggle'}
 " vim中文文档
 Plug 'yianwillis/vimcdoc'
-if has('nvim')
-    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-    Plug 'nvim-treesitter/nvim-treesitter-textobjects'
-    Plug 'nvim-treesitter/nvim-treesitter-refactor'
-    Plug 'romgrk/nvim-treesitter-context'
-else
-    Plug 'sheerun/vim-polyglot'
-    Plug 'octol/vim-cpp-enhanced-highlight'
-endif
+" CPP语法高亮
+Plug 'octol/vim-cpp-enhanced-highlight'
 " 总是匹配tag
 Plug 'valloric/MatchTagAlways', {'for': ['html', 'css', 'xml']}
 " 显示颜色 例如: #654456
@@ -205,8 +181,9 @@ let g:coc_global_extensions = [
 Plug 'skywind3000/asyncrun.vim', {'on': ['AsyncRun', 'AsyncStop'] }
 Plug 'skywind3000/asynctasks.vim', {'on': ['AsyncTask', 'AsyncTaskMacro', 'AsyncTaskList', 'AsyncTaskEdit'] }
 
-Plug 'voldikss/vim-floaterm'
-
 Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
 
 Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary!' }
+
+" [开头的快捷键
+Plug 'tpope/vim-unimpaired'

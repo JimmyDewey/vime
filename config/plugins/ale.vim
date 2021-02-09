@@ -24,9 +24,6 @@ let g:ale_linters_explicit = 1
 
 " 高亮显示错误地方
 "let g:ale_set_highlights = 1
-"自定义error和warning图标
-let g:ale_sign_error = 'hhhE'
-let g:ale_sign_warning = 'W'
 "状态栏设置,状态栏中整合ale
 let g:ale_statusline_format = ['ㄨ %d', 'ϟ %d', '✔ OK']
 "提示栏设置，显示Linter名称,出错或警告等相关信息
@@ -52,5 +49,5 @@ let g:ale_cpp_cppcheck_options = ''
 " 快捷键
 nmap gd :ALEGoToDefinition<cr>
 nmap gr :ALEFindReferences<cr>
-
+"开头的快捷键
 nmap K :ALEHover<cr>
