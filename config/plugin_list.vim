@@ -90,12 +90,6 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': 
 Plug 'pseewald/vim-anyfold'
 " 起始界面
 Plug 'mhinz/vim-startify'
-" 翻译插件
-Plug 'iamcco/dict.vim', {'on':
-    \ [
-    \ '<Plug>DictSearch', '<Plug>DictVSearch', '<Plug>DictWSearch',
-    \ '<Plug>DictWVSearch', '<Plug>DictRSearch', '<Plug>DictRVSearch'
-    \ ]}
 " 关闭buffer而不关闭窗口
 Plug 'rbgrouleff/bclose.vim', {'on': 'Bclose'}
 " latex插件
