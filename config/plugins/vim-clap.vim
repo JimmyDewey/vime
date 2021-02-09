@@ -56,3 +56,5 @@ nnoremap <leader>gd :Clap git_diff_files<CR>
 nnoremap <leader>gf :Clap gfiles<CR>
 nnoremap <leader>gm :Clap bcommits<cr>
 nnoremap <leader>gM :Clap commits<cr>
+
+nnoremap <leader>p :Clap<CR>

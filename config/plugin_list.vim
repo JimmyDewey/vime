@@ -67,8 +67,6 @@ Plug 'easymotion/vim-easymotion', {'on':
    \ ]}
 " 对齐
 Plug 'junegunn/vim-easy-align', {'on': ['EasyAlign', '<Plug>(EasyAlign)']}
-" 对齐线
-Plug 'Yggdroot/indentLine', {'on': 'IndentLinesEnable'}
 " 多光标
 Plug 'mg979/vim-visual-multi'
 " 悬浮终端
@@ -81,10 +79,6 @@ Plug 'mhinz/vim-startify'
 Plug 'rbgrouleff/bclose.vim', {'on': 'Bclose'}
 " 平滑滚动
 Plug 'psliwka/vim-smoothie'
-" 在命令行使用linux命令新建文件文件夹重命名当前buffer等
-Plug 'tpope/vim-eunuch', {'on': ['Mkdir', 'Rename', 'Unlink', 'Delete', 'Move', 'Chmod', 'Cfind', 'Clocate', 'Lfine', 'Llocate', 'SudoEdit', 'SudoWrite', 'Wall', 'W']}
-" 最大化窗口，ctrl w o
-Plug 'troydm/zoomwintab.vim', {'on': 'ZoomWinTabToggle'}
 " vim中文文档
 Plug 'yianwillis/vimcdoc'
 " CPP语法高亮
