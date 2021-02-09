@@ -1,14 +1,13 @@
 " 语法检查
-Plug 'w0rp/ale'
+" Plug 'w0rp/ale'
 
 " 代码补全插件
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 " 检索
-Plug 'junegunn/fzf', { 'do': {-> fzf#install()} }
-Plug 'fszymanski/fzf-gitignore', {'do': ':UpdateRemotePlugins'}
-Plug 'junegunn/fzf.vim' | Plug 'antoinemadec/coc-fzf',  {'branch': 'release'}
-" c debug
-Plug 'puremourning/vimspector'
+" Plug 'junegunn/fzf', { 'do': {-> fzf#install()} }
+" Plug 'fszymanski/fzf-gitignore', {'do': ':UpdateRemotePlugins'}
+" Plug 'junegunn/fzf.vim' | Plug 'antoinemadec/coc-fzf',  {'branch': 'release'}
+
 " 注释插件
 Plug 'scrooloose/nerdcommenter'
 " 生成注释文档
@@ -121,7 +120,6 @@ let g:coc_global_extensions = [
     " \ 'coc-fzf-preview',
     " \ 'coc-bookmark',
     " \ 'coc-rainbow-fart',
-    " \ 'coc-lists',
 
 " 运行C/C++
 Plug 'skywind3000/asyncrun.vim', {'on': ['AsyncRun', 'AsyncStop'] }
