@@ -128,7 +128,6 @@ Plug 'skywind3000/asynctasks.vim', {'on': ['AsyncTask', 'AsyncTaskMacro', 'Async
 Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
 
 Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary!' }
-
 " [开头的快捷键
 Plug 'tpope/vim-unimpaired'
 
