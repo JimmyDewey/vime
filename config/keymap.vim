@@ -1,8 +1,8 @@
 " 绑定leader到space
 let mapleader = "\<Space>"
 
-" leader-w保存文件
-noremap <leader>w :w<cr>
+" leader-bw保存文件
+noremap <leader>bw :w<cr>
 
 " 窗口相关快捷键
 noremap <c-h> <C-w>h

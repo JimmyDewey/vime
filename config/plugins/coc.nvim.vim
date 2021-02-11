@@ -80,8 +80,8 @@ function! s:show_documentation()
   endif
 endfunction
 " 函数参数的文档
-" nnoremap <silent> <space>k :call CocActionAsync('showSignatureHelp')<CR>
-" au CursorHoldI * sil call CocActionAsync('showSignatureHelp')
+nnoremap <silent> <space>k :call CocActionAsync('showSignatureHelp')<CR>
+au CursorHoldI * sil call CocActionAsync('showSignatureHelp')
 
 " 显示光标下符号的文档
 nnoremap <silent> <leader>h :call CocActionAsync('doHover')<cr>
@@ -98,7 +98,7 @@ augroup end
 
 " Applying codeAction to the selected region.
 " Example: `<leader>aap` for current paragraph
-xmap <leader>a  <Plug>(coc-codeaction-selected)
+" xmap <leader>a  <Plug>(coc-codeaction-selected)
 nmap <leader>a  <Plug>(coc-codeaction-selected)
 
 " Remap keys for applying codeAction to the current buffer.
@@ -148,21 +148,21 @@ set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 " Mappings for CoCList
 " Show all diagnostics.
-nnoremap <silent><nowait> <space>a  :<C-u>CocList diagnostics<cr>
+nnoremap <silent><nowait> <space>la  :<C-u>CocList diagnostics<cr>
 " Manage extensions.
-nnoremap <silent><nowait> <space>e  :<C-u>CocList extensions<cr>
+nnoremap <silent><nowait> <space>le  :<C-u>CocList extensions<cr>
 " Show commands.
-nnoremap <silent><nowait> <space>c  :<C-u>CocList commands<cr>
+nnoremap <silent><nowait> <space>lc  :<C-u>CocList commands<cr>
 " Find symbol of current document.
-nnoremap <silent><nowait> <space>o  :<C-u>CocList outline<cr>
+nnoremap <silent><nowait> <space>lo  :<C-u>CocList outline<cr>
 " Search workspace symbols.
-nnoremap <silent><nowait> <space>s  :<C-u>CocList -I symbols<cr>
+nnoremap <silent><nowait> <space>ls  :<C-u>CocList -I symbols<cr>
 " Do default action for next item.
-nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
+nnoremap <silent><nowait> <space>lj  :<C-u>CocNext<CR>
 " Do default action for previous item.
-nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
+nnoremap <silent><nowait> <space>lk  :<C-u>CocPrev<CR>
 " Resume latest coc list.
-nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+nnoremap <silent><nowait> <space>lp  :<C-u>CocListResume<CR>
 
 """""""""""""""""""""""
 " coc-plug config
@@ -170,8 +170,6 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 """""""""""""""""""""""
 
 function! s:lc_coc_highlight() abort
-    " 取消csv的高亮
-    call coc#config("highlight.disableLanguages", ["csv"])
     " 高亮当前光标下的所有单词
     au CursorHold * silent call CocActionAsync('highlight')
 endfunction
@@ -211,22 +209,6 @@ function! s:lc_coc_lists() abort
         \ || common#functions#HasCocPlug('coc-fzf-preview')
         return
     endif
-
-    nnoremap <silent> <M-f> :call <SID>cocListFilesWithWiki("")<CR>
-    nnoremap <silent> <M-F> :call <SID>cocListFilesWithWiki($HOME)<CR>
-    nnoremap <silent> <M-b> :CocList buffers<CR>
-    nnoremap <silent> <M-c> :CocList vimcommands<CR>
-    " tags, 需要先generate tags
-    nnoremap <silent> <M-t> :CocList tags<cr>
-    nnoremap <silent> <M-s> :CocList --auto-preview --interactive grep<cr>
-    nnoremap <silent> ? :CocList --auto-preview --interactive lines<cr>
-    nnoremap <silent> <M-r> :CocList mru -A<CR>
-    nnoremap <silent> <M-m> :CocList marks<CR>
-    nnoremap <silent> <M-M> :CocList maps<CR>
-    nnoremap <silent> <M-w> :CocList windows<CR>
-    nnoremap <silent> <M-y> :CocList yank<CR>
-    nnoremap <silent> <F8> :CocList locationlist<CR>
-    nnoremap <silent> <F9> :CocList quickfix<CR>
 endfunction
 
 function! s:lc_coc_yank() abort
@@ -237,25 +219,6 @@ function! s:lc_coc_yank() abort
         nnoremap <silent> <M-y>  :<C-u>CocList yank<cr>
     endif
     nnoremap <silent> <space>y  :<C-u>CocList yank<cr>
-endfunction
-
-function! s:lc_coc_translator() abort
-    " nmap  <leader>e <Plug>(coc-translator-e)
-    nmap  <leader>d <Plug>(coc-translator-p)
-endfunction
-
-function! s:lc_coc_bookmark() abort
-    if common#functions#HasPlug('vim-bookmarks')
-        return
-    endif
-
-    call coc#config("bookmark.sign", "♥")
-    nmap <silent> ma <Plug>(coc-bookmark-annotate)
-    nmap <silent> mm <Plug>(coc-bookmark-toggle)
-    nmap <silent> mj <Plug>(coc-bookmark-next)
-    nmap <silent> mk <Plug>(coc-bookmark-prev)
-    nmap <silent> mc :CocCommand bookmark.clearForCurrentFile<cr>
-    nmap <silent> ml :CocList bookmark<cr>
 endfunction
 
 function! s:lc_coc_todolist() abort
@@ -327,11 +290,6 @@ function! s:lc_coc_python() abort
     call coc#config("python.linting.pylintEnabled", v:true)
 endfunction
 
-function! s:lc_coc_ci() abort
-    nmap <silent> w <Plug>(coc-ci-w)
-    nmap <silent> b <Plug>(coc-ci-b)
-endfunction
-
 function! s:lc_coc_rainbow_fart() abort
     call coc#config("rainbow-fart.ffplay", "ffplay")
 endfunction
@@ -370,16 +328,24 @@ function! s:lc_coc_explorer() abort
         \      'open-action-strategy': 'sourceWindow',
         \   },
         \   'simplify': {
-        \     'file-child-template': '[selection | clip | 1] [indent][icon | 1] [filename omitCenter 1]'
-        \   }
+        \     'file-child-template': '[selection | clip | 1] [indent][icon | 1] [filename omitCenter 1]',
+        \   },
+        \   'buffer': {
+              \     'sources': [{'name': 'buffer', 'expand': v:true}]
+        \   },
     \ }
 
+    " nmap <leader>e :CocCommand explorer<CR>
+
     " Use preset argument to open it
-    " nmap <space>rd :CocCommand explorer --preset .vim<CR>
-    nmap <leader>e :CocCommand explorer<CR>
-    " if !common#functions#HasPlug('ranger.vim')
-    "    nmap <leader>f :CocCommand explorer --preset floating<CR>
-    " endif
+    nmap <space>ed :CocCommand explorer --preset .vim<CR>
+    nmap <space>ef :CocCommand explorer --preset floating<CR>
+    nmap <space>ec :CocCommand explorer --preset cocConfig<CR>
+    nmap <space>es :CocCommand explorer --preset simplify<CR>
+    nmap <space>ee :CocCommand explorer --preset simplify<CR>
+
+    " List all presets
+    nmap <space>el :CocList explPresets
 
     augroup vime_coc_explorer_group
         autocmd!
@@ -389,7 +355,6 @@ function! s:lc_coc_explorer() abort
 
     " config
     call coc#config("explorer.icon.enableNerdfont", v:true)
-    call coc#config("explorer.bookmark.child.template", "[selection | 1] [filename] [position] - [annotation]")
     call coc#config("explorer.file.column.icon.modified", "•")
     call coc#config("explorer.file.column.icon.deleted", "✖")
     call coc#config("explorer.file.column.icon.untracked", "ᵁ")
@@ -451,7 +416,6 @@ let s:coc_config_functions = {
             \ 'coc-highlight': function('<SID>lc_coc_highlight'),
             \ 'coc-lists': function('<SID>lc_coc_lists'),
             \ 'coc-yank': function('<SID>lc_coc_yank'),
-            \ 'coc-translator': function('<SID>lc_coc_translator'),
             \ 'coc-todolist': function('<SID>lc_coc_todolist'),
             \ 'coc-clangd': function('<SID>lc_coc_clangd'),
             \ 'coc-xml': function('<SID>lc_coc_xml'),
@@ -461,7 +425,6 @@ let s:coc_config_functions = {
             \ 'coc-python': function('<SID>lc_coc_python'),
             \ 'coc-rainbow-fart': function('<SID>lc_coc_rainbow_fart'),
             \ 'coc-explorer': function('<SID>lc_coc_explorer'),
-            \ 'coc-ci': function('<SID>lc_coc_ci'),
             \ 'coc-vimlsp': function('<SID>lc_coc_vimlsp'),
             \ }
 

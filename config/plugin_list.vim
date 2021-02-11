@@ -110,11 +110,12 @@ let g:coc_global_extensions = [
     \ 'coc-explorer',
     \ 'coc-ci',
     \ 'coc-prettier',
+    \ 'coc-actions',
+    \ 'coc-tsserver',
     \ ]
 
     " \ 'coc-git',
     " \ 'coc-marketplace',
-    " \ 'coc-tsserver',
     " \ 'coc-calc',
     " \ 'coc-tabnine',
     " \ 'coc-fzf-preview',
