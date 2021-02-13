@@ -1,6 +1,5 @@
 set timeoutlen=100
-let g:maplocalleader = '\<M>'
-nnoremap g :WhichKey 'g'<CR>
+let g:maplocalleader = ','
 nnoremap <silent> [ :<c-u>WhichKey '['<CR>
 
 " call which_key#register('<Space>', "g:which_key_map")
@@ -53,7 +52,7 @@ let g:which_key_map.b = {
 
 let g:which_key_map.l = {
       \ 'name' : '+lsp',
-      \ 'f' : ['spacevim#lang#util#Format()'          , 'formatting']       ,
+      \ 'f' : ['Format()']       ,
       \ 'r' : ['spacevim#lang#util#FindReferences()'  , 'references']       ,
       \ 'R' : ['spacevim#lang#util#Rename()'          , 'rename']           ,
       \ 's' : ['spacevim#lang#util#DocumentSymbol()'  , 'document-symbol']  ,

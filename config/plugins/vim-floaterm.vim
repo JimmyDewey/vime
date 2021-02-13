@@ -15,4 +15,4 @@ augroup vime_floaterm_group
     au FIleType floaterm tnoremap <buffer> <silent> <M-l> <c-\><c-n>:FloatermNext<CR>
 augroup END
 
-" noremap <leader>r :FloatermNew --autoclose=0 clang++ % -o %< && ./%< <cr>
+noremap <leader>ll :FloatermNew --autoclose=0 clang++ % -o %< && ./%< <cr>

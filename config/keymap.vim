@@ -2,7 +2,7 @@
 let mapleader = "\<Space>"
 
 " leader-bw保存文件
-noremap <leader>bw :w<cr>
+noremap <leader>ww :w<cr>
 
 " 窗口相关快捷键
 noremap <c-h> <C-w>h

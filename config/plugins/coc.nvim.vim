@@ -31,45 +31,37 @@ inoremap <silent><expr> <TAB>
       \ coc#refresh()
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
-
 " shift tab 选择上一个补全
 inoremap <silent><expr> <S-TAB>
     \ pumvisible() ? "\<C-p>" :
     \ "\<C-h>"
-
-
 " Make <CR> auto-select the first completion item and notify coc.nvim to
 " format on enter, <cr> could be remapped by other vim plugin
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-
 " Use `[g` and `]g` to navigate diagnostics
 " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
-nmap <silent> <C-r>=CocActionAsync('showSignatureHelp')<CR>
-" 跳转到定义
+" nmap <silent> <C-r>=CocActionAsync('showSignatureHelp')<CR>
+"   转到定义
 nmap <silent> gd <Plug>(coc-definition)
-" 跳转到类型定义
+"   转到类型定义
 nmap <silent> gy <plug>(coc-type-definition)
-" 跳转到实现
+"   转到实现
 nmap <silent> gi <plug>(coc-implementation)
-" 跳转到引用
+"   转到引用
 nmap <silent> gr <plug>(coc-references)
-" 重构refactor,需要lsp支持
+"   构refactor,  要lsp  持
 nmap <silent> <space>rf <Plug>(coc-refactor)
-" 修复代码
-nmap <silent> <space>f  <Plug>(coc-fix-current)
-" 变量重命名
+"   修复代码
+nmap <silent> <space>lf  <Plug>(coc-fix-current)
+"   量重命名
 nmap <silent> <space>rn <Plug>(coc-rename)
-
-" 使用K悬浮显示定义
+.
+"   用K  浮显示定义
 nnoremap <silent> K :call <SID>show_documentation()<CR>
-
+.
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
     execute 'h '.expand('<cword>')
@@ -108,14 +100,14 @@ nmap <leader>qf  <Plug>(coc-fix-current)
 
 " Map function and class text objects
 " NOTE: Requires 'textDocument.documentSymbol' support from the language server.
-xmap if <Plug>(coc-funcobj-i)
-omap if <Plug>(coc-funcobj-i)
-xmap af <Plug>(coc-funcobj-a)
-omap af <Plug>(coc-funcobj-a)
-xmap ic <Plug>(coc-classobj-i)
-omap ic <Plug>(coc-classobj-i)
-xmap ac <Plug>(coc-classobj-a)
-omap ac <Plug>(coc-classobj-a)
+" xmap if <Plug>(coc-funcobj-i)
+" omap if <Plug>(coc-funcobj-i)
+" xmap af <Plug>(coc-funcobj-a)
+" omap af <Plug>(coc-funcobj-a)
+" xmap ic <Plug>(coc-classobj-i)
+" omap ic <Plug>(coc-classobj-i)
+" xmap ac <Plug>(coc-classobj-a)
+" omap ac <Plug>(coc-classobj-a)
 
 " Remap <C-f> and <C-b> for scroll float windows/popups.
 if has('nvim-0.4.0') || has('patch-8.2.0750')
@@ -135,6 +127,8 @@ xmap <silent> <C-s> <Plug>(coc-range-select)
 " Add `:Format` command to format current buffer.
 command! -nargs=0 Format :call CocAction('format')
 
+nnoremap <silent> <space>lf :<C-u> Format<cr>
+
 " Add `:Fold` command to fold current buffer.
 command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 
@@ -148,21 +142,17 @@ set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 " Mappings for CoCList
 " Show all diagnostics.
-nnoremap <silent><nowait> <space>la  :<C-u>CocList diagnostics<cr>
-" Manage extensions.
-nnoremap <silent><nowait> <space>le  :<C-u>CocList extensions<cr>
-" Show commands.
-nnoremap <silent><nowait> <space>lc  :<C-u>CocList commands<cr>
-" Find symbol of current document.
-nnoremap <silent><nowait> <space>lo  :<C-u>CocList outline<cr>
-" Search workspace symbols.
-nnoremap <silent><nowait> <space>ls  :<C-u>CocList -I symbols<cr>
-" Do default action for next item.
-nnoremap <silent><nowait> <space>lj  :<C-u>CocNext<CR>
-" Do default action for previous item.
-nnoremap <silent><nowait> <space>lk  :<C-u>CocPrev<CR>
-" Resume latest coc list.
-nnoremap <silent><nowait> <space>lp  :<C-u>CocListResume<CR>
+" nnoremap <silent><nowait> <space>la  :<C-u>CocList diagnostics<cr>
+" " Find symbol of current document.
+" nnoremap <silent><nowait> <space>lo  :<C-u>CocList outline<cr>
+" " Search workspace symbols.
+" nnoremap <silent><nowait> <space>ls  :<C-u>CocList -I symbols<cr>
+" " Do default action for next item.
+" nnoremap <silent><nowait> <space>lj  :<C-u>CocNext<CR>
+" " Do default action for previous item.
+" nnoremap <silent><nowait> <space>lk  :<C-u>CocPrev<CR>
+" " Resume latest coc list.
+" nnoremap <silent><nowait> <space>lp  :<C-u>CocListResume<CR>
 
 """""""""""""""""""""""
 " coc-plug config

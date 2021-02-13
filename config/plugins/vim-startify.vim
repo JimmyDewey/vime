@@ -38,13 +38,11 @@ let g:startify_session_before_save = [
 let g:startify_commands = [
     \ {'u': ['插件更新', 'PlugUpdate']},
     \ {'t': ['打开终端', 'terminal']},
-    \ {'w': ['笔记列表', 'VimwikiIndex']},
     \ {'s': ['启动时间', 'StartupTime']},
     \ ]
 
 let g:startify_lists = [
        \ { 'type': 'sessions',  'header': ['        Sessions']       },
-       \ { 'type': 'bookmarks', 'header': ['        Bookmarks']      },
        \ { 'type': 'files',     'header': ['        MRU']            },
        \ { 'type': 'dir',       'header': ['        MRU '. getcwd()] },
        \ { 'type': 'commands',  'header': ['        Commands']       },
