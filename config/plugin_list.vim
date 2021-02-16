@@ -112,6 +112,9 @@ let g:coc_global_extensions = [
     \ 'coc-prettier',
     \ 'coc-actions',
     \ 'coc-tsserver',
+    \ 'coc-emmet',
+    \ 'coc-html',
+    \ 'coc-python',
     \ ]
 
     " \ 'coc-git',

@@ -42,7 +42,7 @@ inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
 " Use `[g` and `]g` to navigate diagnostics
 " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
-nmap <silent> ]g <Plug>(coc-diagnostic-next)
+nmap <silent> [h <Plug>(coc-diagnostic-next)
 " nmap <silent> <C-r>=CocActionAsync('showSignatureHelp')<CR>
 "   转到定义
 nmap <silent> gd <Plug>(coc-definition)
