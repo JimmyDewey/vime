@@ -1,5 +1,6 @@
 {
   "coc.preferences.extensionUpdateCheck": "daily",
+  "coc.preferences.colorSupport": false,
   "coc.preferences.formatOnSaveFiletypes": [
     "javascript",
     "css",

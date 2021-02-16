@@ -115,6 +115,8 @@ let g:coc_global_extensions = [
     \ 'coc-emmet',
     \ 'coc-html',
     \ 'coc-python',
+    \ 'coc-css',
+    \ 'coc-highlight',
     \ ]
 
     " \ 'coc-git',
@@ -138,3 +140,5 @@ Plug 'tpope/vim-unimpaired'
 " 撤销树
 Plug 'simnalamburt/vim-mundo'
 
+" javascript语法高亮
+Plug 'pangloss/vim-javascript'
