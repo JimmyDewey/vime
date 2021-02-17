@@ -5,7 +5,9 @@ else
 endif
 
 lua << EOF
-
-require'colorizer'.setup()
+# in case that neovim don't have jit inside
+if jit ~= nil then
+  require'colorizer'.setup()
+end
 
 EOF
