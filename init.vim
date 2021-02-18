@@ -2,11 +2,30 @@ if exists('g:vscode')
     " 绑定leader到space
     let mapleader = "\<Space>"
 
-    " leader-w保存文件
-    noremap <leader>w :Write<cr>
+    " leader-ww保存文件
+    noremap <leader>ww :Write<cr>
+
+    call plug#begin('~/.cache/vim/vscode-plugin/')
+      Plug 'asvetliakov/vim-easymotion'
+    call plug#end()
+
+    " 一个字符
+    map f <Plug>(easymotion-bd-f)
+    nmap f <Plug>(easymotion-overwin-f)
+
+    " 无需输入字符，即可全屏搜索单词
+    let g:EasyMotion_keys = 'abcdefghijklmnopqrstuvwx-^&*()+123456ABCDEF/;\=[]GHIJKLMNOPQRST7890UVWXYZyz'
+    " 单词间移动
+    map  F <Plug>(easymotion-bd-w)
+    nmap F <Plug>(easymotion-overwin-w)
+
+    xmap gc  <Plug>VSCodeCommentary
+    nmap gc  <Plug>VSCodeCommentary
+    omap gc  <Plug>VSCodeCommentary
+    nmap gcc <Plug>VSCodeCommentaryLine
+    
     " Cannot write buftype option is set
     set buftype=""
-
 else
 
     " 初始化一些全局变量
@@ -20,7 +39,7 @@ else
 
     " vim-plug 载入插件
     call plug#begin(get(g:, 'plugins_install_path', '~/.vim/plugin/'))
-    LoadScript plugin_list.vim
+      LoadScript plugin_list.vim
     call plug#end()
 
     " 载入快捷键配置
