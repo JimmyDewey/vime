@@ -11,18 +11,16 @@ if exists('g:vscode')
 
     " 一个字符
     map f <Plug>(easymotion-bd-f)
-    nmap f <Plug>(easymotion-overwin-f)
 
-    " 无需输入字符，即可全屏搜索单词
-    let g:EasyMotion_keys = 'abcdefghijklmnopqrstuvwx-^&*()+123456ABCDEF/;\=[]GHIJKLMNOPQRST7890UVWXYZyz'
     " 单词间移动
     map  F <Plug>(easymotion-bd-w)
-    nmap F <Plug>(easymotion-overwin-w)
 
-    xmap gc  <Plug>VSCodeCommentary
-    nmap gc  <Plug>VSCodeCommentary
-    omap gc  <Plug>VSCodeCommentary
-    nmap gcc <Plug>VSCodeCommentaryLine
+    " xmap <leader>c<leader>  <Plug>VSCodeCommentary<cr>
+    " nmap <leader>c<leader>  <Plug>VSCodeCommentary<cr>
+    " omap <leader>c<leader>  <Plug>VSCodeCommentary<cr>
+    " nmap gc  <Plug>VSCodeCommentary
+    " omap gc  <Plug>VSCodeCommentary
+    " nmap gcc <Plug>VSCodeCommentaryLine
     
     " Cannot write buftype option is set
     set buftype=""
