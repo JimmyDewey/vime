@@ -21,4 +21,4 @@ function s:vista_toggle() abort
 endfunction
 
 " nnoremap <F3> :Vista!!<CR>
-nnoremap <F3> :call <SID>vista_toggle()<CR>
+nnoremap <leader>v :call <SID>vista_toggle()<CR>
