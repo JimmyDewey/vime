@@ -86,3 +86,5 @@ let g:which_key_map['w'] = {
       \ 'w' : 'save current buffer'                    ,
       \ 'o' : [':only'      , 'close other windows']   ,
       \ }
+
+let g:which_key_map['s'] = [':write',   'save current buffer']
