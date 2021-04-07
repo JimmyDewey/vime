@@ -106,7 +106,6 @@ let g:coc_global_extensions = [
     \ 'coc-json',
     \ 'coc-lists',
     \ 'coc-word',
-    \ 'coc-python',
     \ 'coc-explorer',
     \ 'coc-ci',
     \ 'coc-prettier',
@@ -114,9 +113,9 @@ let g:coc_global_extensions = [
     \ 'coc-tsserver',
     \ 'coc-emmet',
     \ 'coc-html',
-    \ 'coc-python',
     \ 'coc-css',
     \ 'coc-highlight',
+    \ 'coc-pyright',
     \ ]
 
     " \ 'coc-git',
